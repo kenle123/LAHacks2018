@@ -39,6 +39,10 @@ body, html {
     padding-top: 15px;
 }
 
+.paddingBottom {
+    padding-bottom: 30px;
+}
+
 .center {
     text-align: center;
     margin-top: 200px;
