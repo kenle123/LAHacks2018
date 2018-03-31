@@ -1,3 +1,6 @@
 # LAHacks2018
 
-stuff
+Baymax - A personal mental health assistant. 
+
+Utilizes Amazon Alexa and asks the user questions
+Uses Google Cloud Platform's API, Twilio's API, and Alexa's API
