@@ -2,5 +2,5 @@
 
 Baymax - A personal mental health assistant. 
 
-Utilizes Amazon Alexa and asks the user questions
+Utilizes Amazon Alexa and asks the user questions__
 Uses Google Cloud Platform's API, Twilio's API, and Alexa's API
