@@ -1,0 +1,89 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+    
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("baymax3.jpg");
+    min-height: 100%;
+}
+
+/* Second image (Purpose) */
+.bgimg-2 {
+    background-image: url("mental1.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Progress Pics) */
+.bgimg-3 {
+    background-image: url("baymax5.jpg");
+    min-height: 350px;
+}
+
+/* Fourth image (Contact) */
+.bgimg-4 {
+    background-image: url("work16.jpg");
+    min-height: 400px;
+}
+
+.outline {
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.paddingTop {
+    padding-top: 15px;
+}
+
+.paddingBottom {
+    padding-bottom: 30px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 200px;
+}
+
+#inner {
+    display: table;
+    margin: 0 auto;
+}
+
+.purpose {
+    font-size: 30px;
+    text-align: center;
+}
+
+.lastQuote {
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.quote {
+    font-size: 14px;
+    text-align: center;
+}
+
+hr {
+    size: 1px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+        background-attachment: scroll;
+    }
+}
