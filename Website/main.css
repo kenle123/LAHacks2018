@@ -69,6 +69,15 @@ body, html {
     padding-top: 10px;
 }
 
+.quote {
+    font-size: 14px;
+    text-align: center;
+}
+
+hr {
+    size: 1px;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
