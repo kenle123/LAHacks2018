@@ -61,32 +61,33 @@
 
 <!-- Second Parallax Image with Purpose Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="outline w3-xxlarge w3-text-white w3-wide ">PURPOSE</span>
+  <div class="w3-display-middle w3-center">
+    <span class="outline w3-text-white w3-wide purpose">Why Is Mental Health Important?</span>
   </div>
 </div> 
 
 <!-- Container (Purpose Section) -->
 <div class="w3-content w3-container w3-padding-64" id="purpose">
-  <h3 class="w3-center">Purpose</h3>
-  <p class="w3-center" style="font-size:20px"><em>Baymax is your personal mental health assistant</em></p>
-  <p style="text-align:left"><em></em></p>
+  <p style="text-align:center"><strong>"According to the National Institute of Mental Health"</strong></p>
+  <p style="text-align:left"><em>An estimated 16.2 million adults in the United States had at least one major depressive episode. This number represented 6.7% of all U.S. adults.</em></p><br>
+  <p style="text-align:left"><em>In 2016, an estimated 10.3 million U.S. adults aged 18 or older had at least one major depressive episode with severe impairment. This number represented 4.3% of all U.S. adults.</em></p>
   <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Baymax</b></p><br>
-      <img src="baymax4.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Baymax" width="150" height="200">
-    </div>
-
+   
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
         <p style="text-align:center"><strong><em>Welcome to Baymax, a personal mental health assistant whose job is to make sure that you are being the best you possible.</em></strong> How did we come up with this idea? We were introduced to many insightful and impactful companies through live demonstrations and their amazing APIs. Afterwards, we decided to integrate Google Cloud Platform's API, Twilio's API, and Alexa's API in order to complete our project. <strong><em>The amazing thing about Baymax is that it is able to detect and formulate predictions about a user's mental health based off of his or her responses to a question.</em></strong>
       </p>
     </div>
+    
+     <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Baymax</b></p><br>
+      <img src="baymax4.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Baymax" width="150" height="200">
+    </div>
   </div>
 </div>
 
 <!-- Third Parallax Image with Progress Pictures Text -->
-<div class="bgimg-4 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide outline">PROGRESS PICTURES</span>
   </div>
@@ -95,7 +96,7 @@
 <!-- Container (Picture Section) -->
 <div class="w3-content w3-container w3-padding-64" id="progresspic">
   <h3 class="w3-center"></h3>
-  <p class="w3-center">Progress Pictures<em>.<br> Click on the images to make them bigger</em></p><br>
+  <p class="w3-center" style="font-size:18px"><em>Click on the images to make them bigger</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w4-center">
@@ -146,8 +147,8 @@
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<!-- Third Parallax Image with  Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide outline">CONTACT</span>
   </div>
@@ -185,6 +186,11 @@
   </div>
 </footer>
  
+ <script>
+ window.onbeforeunload = function () {
+         window.scrollTo(0,0);
+ }
+</script>
 <!-- Add Google Maps -->
 <script>
 function myMap() {
