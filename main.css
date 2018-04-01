@@ -64,6 +64,11 @@ body, html {
     text-align: center;
 }
 
+.lastQuote {
+    font-size: 14px;
+    padding-top: 10px;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
