@@ -1,0 +1,51 @@
+pyrebase
+twilio
+#Need to set the environment variable for GOOGLE_APPLICATION_CREDENTIALS
+pip install --upgrade google-cloud-language
+pip install --upgrade pip
+
+
+tonyle14
+tonyle148@gmail.com
+password:Lahacks2018
+
+vle7@uci.edu
+123abc!@#
+
+#Alexa Skil
+amzn1.ask.skill.7ea7299d-eb7f-4983-b680-1554053edd01
+
+#Create
+aws lambda create-function --region us-east-1 --function-name baymax_handler --zip-file fileb://C:/Users/Ryanluu2017/PycharmProjects/BaymaxFinal.zip --role arn:aws:iam::760387372128:role/Baymax --handler baymax_handler.handler --runtime python3.6 --profile adminuser --timeout 10 --memory-size 1024
+
+Pyrebase==3.0.27
+google-cloud-language==1.0.1
+twilio==6.10.4
+
+KEYS
+AWSAccessKeyId=AKIAIFE44GGGNXTGARRA
+AWSSecretKey=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
+
+functions:
+  numpy:
+    handler: handler.lambda_handler
+    
+    
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: false
+    zip: true
+    pythonBin: C:\Users\Ryanluu2017\AppData\Local\Programs\Python\Python36\python.exe
+
+provider:
+  name: aws
+  runtime: python3.6
+  alias: pythona
+
+kle959715932
+123abc!@#G
+
+1234567890workwork

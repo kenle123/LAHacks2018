@@ -2,6 +2,7 @@ import pyrebase
 from nlp_utils import NlpUtils
 from datetime import datetime,date
 
+
 class FirebaseUtils:
 
     def __init__(self,email,password):
@@ -45,10 +46,6 @@ class FirebaseUtils:
         user_info["email"]=self.email
         user[self.local_id]=user_info
         self.firebase_db.child("users").child().set(user,self.idToken)
-
-    def sort_db(self):
-        for user
-        self.firebase_db.sort(lambda: );
 
 
     def create_sentiment_history_db(self,sentiment):
@@ -100,7 +97,30 @@ class FirebaseUtils:
                 self.firebase_db.child("users").child(self.local_id).child("vocabulary").child(new_word).child(
                     "frequency").set(1, self.idToken)
 
+                # Reads from the database
+
+    def read_user_freq_db(self):
+        final_list=[]
+        users_by_freq=self.firebase_db.child("users").child(self.local_id).child("vocabulary").get(self.idToken).each()
+
+        for users in users_by_freq:
+            users.val()["word"]=users.key()
+            final_list.append(users.val())
+
+        print(final_list)
+
+        final_ans=sorted(final_list,key=lambda x:x["frequency"])
+        print(final_ans)
+
+        final_list_tuple=[]
+        for i in final_ans:
+            final_list_tuple.append((i["word"],i["frequency"],i["0"]))
+        return final_list_tuple[-1]
+
     ''' Helper functions for creating fields '''
+    def _process_user_freqs(self,users):
+        pass
+
     def _sentiment_obj_create(self,sentiment):
         sentiment_obj = {}
 
@@ -122,6 +142,8 @@ class FirebaseUtils:
         response_obj["timestamp"] = day_stamp
 
         return response_obj
+
+
 
     #Will check the stressor frequency and give suggested actions if the stressor is strongly neg
     def _check_stressor_vocabulary(self,new_vocab):
@@ -149,14 +171,18 @@ if __name__=="__main__":
     #utils.create_user(utils.email,utils.password) Remove comment if account does not exist
     fbUtils.sign_in_user(fbUtils.email, fbUtils.password)
     #fbUtils.write_user_db()
+    print(fbUtils.read_user_freq_db())
+
+    #text2=nlpUtils.predict_sentiment("Love. I love this. Amazing. Great. Love!")
+    # fbUtils.create_sentiment_history_db(text1)
+    #fbUtils.update_sentiment_history_db(text2)
+    # fbUtils.create_response_history_db("I love you",text1)
+    #fbUtils.update_response_history_db("Everything here on this earth I love",text2)
+    # vocabulary=nlpUtils.analyze_text_entities("My mom has been making me so mad. So mad. Mom")
+    # fbUtils._check_stressor_vocabulary(vocabulary)
 
 
-    for i in range(1):
-        #text1=nlpUtils.predict_sentiment("HATE HATE HATE Person. Trees. Person")
-        text2=nlpUtils.predict_sentiment("Love. I love this. Amazing. Great. Love!")
-        #fbUtils.create_sentiment_history_db(text1)
-        #fbUtils.update_sentiment_history_db(text2)
-        #fbUtils.create_response_history_db("I love you",text1)
-        fbUtils.update_response_history_db("Everything here on this earth I love",text2)
-        vocabulary=nlpUtils.analyze_text_entities("My mom has been making me so mad. So mad. Mom")
-        fbUtils._check_stressor_vocabulary(vocabulary)
+
+
+
+

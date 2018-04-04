@@ -25,7 +25,6 @@ class NlpUtils():
             5:"work_of_art",
             6:"consumer_good",
             7:"other"
-
         }
 
     #Analyzes sentiment
